@@ -1,0 +1,1 @@
+include ':app', ':user_ewm_login', ':zbardemo', ':zbar', ':qrcodecore', ':location', ':dialog_map', ':baidu_map'

@@ -1,0 +1,294 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:2:1-27:12
+MERGED from [com.android.databinding:adapters:3.2.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\adapters-3.2.0.aar\1c8feae7a74f1f8e0c618262868efdcc\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.databinding:library:3.2.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\library-3.2.0.aar\0b96347b729e96a116dae9ffe0dd03fc\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\7fe1668945d1bb15dafe419f0b372e49\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\7dadf57123ac1e877b9417c93ac8739c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\b02f2eb21f562f2a8b7a6537abdc641d\AndroidManifest.xml:17:1-22:12
+MERGED from [pub.devrel:easypermissions:1.0.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\9b05bc4f019d5a19b83d10cd1044f9d1\AndroidManifest.xml:2:1-19:12
+MERGED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:2:1-50:12
+MERGED from [cn.bingoogolapple:bga-baseadapter:1.2.9] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-baseadapter-1.2.9.aar\bcd7be7e097b0d0107060d2ec883d507\AndroidManifest.xml:2:1-10:12
+MERGED from [cn.bingoogolapple:bga-flowlayout:1.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-flowlayout-1.0.0.aar\941bbadb61b63f496855e897c2f13b1e\AndroidManifest.xml:2:1-10:12
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\glide-4.7.1.aar\790213e41146f5de6b5c2dfd1f99713d\AndroidManifest.xml:2:1-13:12
+MERGED from [:zbar] D:\androidstudio_real_workplace\WaterSampling\zbar\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\93c12c5d5f0dbd3b36e33418a71a070d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\ae81f2b3fc6e57dd02d0641a7381fc62\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\c15c3af224da97c9096b8e4d072a4072\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\aa6c9014c38292b4cb7bd72d1304e4d4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\7ff712cc3d0a46dbe894d746be04f8b6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\f0619deb869716152a2712de4e3adcdf\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\be4b40d6c944fd7db8bb25f21f1e31ef\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\8a77d055af01dace7ea2f562b2d90673\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\0982081defe6180e4f457b3ca8e72881\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\bd504ec9237029d97552affc0d911c5b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\34b9b820bf05c163c41e1f9ac966c413\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\4aaa66435327a768b45adcc478b3f14e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\21c726f3c488ac020a4ccab41ba23792\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\3b5b5f60aef1e57f7aa175794a67f37a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\292651d53df3d25d8cb07b75c69ca814\AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f67c09014d8f39f687235d81bf843836\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\5b095c969e0f15cefe0da6817d5f8dad\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\26387c0d26b657541e1569ecfe47c2fb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.7.1.aar\95cad924d7f4148a1e5728e88ec54bc8\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\468b8e594fd817aef0ea3581eacdbe57\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\f526ab5e83ffcd80a68661e41ab98878\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\338b2c443b5a12a1cc990c73ff059752\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\fbab436b97a3cae56ea8f92ca75f68f7\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\c43884873a1efccdb780905568f1806f\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\01c0f8e1c12ddf8e47ca1a20d761f9a3\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\6927ce2160285dfb17b8d6df184c6c4e\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3987ebe497c7e9e25669ad6b8cd60fef\AndroidManifest.xml:17:1-22:12
+MERGED from [:qrcodecore] D:\androidstudio_real_workplace\WaterSampling\qrcodecore\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-19:12
+INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:2:1-27:12
+	package
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:3:5-48
+	android:versionName
+		INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.VIBRATE
+ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:5:5-66
+	android:name
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:5:22-63
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:6:5-80
+MERGED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:9:5-80
+MERGED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:6:22-77
+application
+ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:8:5-25:19
+MERGED from [pub.devrel:easypermissions:1.0.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\9b05bc4f019d5a19b83d10cd1044f9d1\AndroidManifest.xml:11:5-17:19
+MERGED from [pub.devrel:easypermissions:1.0.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\9b05bc4f019d5a19b83d10cd1044f9d1\AndroidManifest.xml:11:5-17:19
+MERGED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:13:5-48:19
+MERGED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:13:5-48:19
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\glide-4.7.1.aar\790213e41146f5de6b5c2dfd1f99713d\AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\glide-4.7.1.aar\790213e41146f5de6b5c2dfd1f99713d\AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\292651d53df3d25d8cb07b75c69ca814\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\292651d53df3d25d8cb07b75c69ca814\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\5b095c969e0f15cefe0da6817d5f8dad\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\5b095c969e0f15cefe0da6817d5f8dad\AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.7.1.aar\95cad924d7f4148a1e5728e88ec54bc8\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.7.1.aar\95cad924d7f4148a1e5728e88ec54bc8\AndroidManifest.xml:9:5-20
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\292651d53df3d25d8cb07b75c69ca814\AndroidManifest.xml:22:18-91
+	android:label
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:11:9-41
+	android:icon
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:12:9-40
+activity#cn.bingoogolapple.qrcode.zbardemo.MainActivity
+ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:13:9-22:20
+	android:screenOrientation
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:16:13-49
+	android:label
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:15:13-45
+	android:name
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:14:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:17:13-21:29
+action#android.intent.action.MAIN
+ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:18:17-69
+	android:name
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:18:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:20:17-77
+	android:name
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:20:27-74
+activity#cn.bingoogolapple.qrcode.zbardemo.TestScanActivity
+ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:24:9-54
+	android:name
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml:24:19-51
+uses-sdk
+INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+MERGED from [com.android.databinding:adapters:3.2.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\adapters-3.2.0.aar\1c8feae7a74f1f8e0c618262868efdcc\AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:adapters:3.2.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\adapters-3.2.0.aar\1c8feae7a74f1f8e0c618262868efdcc\AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.2.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\library-3.2.0.aar\0b96347b729e96a116dae9ffe0dd03fc\AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.2.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\library-3.2.0.aar\0b96347b729e96a116dae9ffe0dd03fc\AndroidManifest.xml:22:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\7fe1668945d1bb15dafe419f0b372e49\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\7fe1668945d1bb15dafe419f0b372e49\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\7dadf57123ac1e877b9417c93ac8739c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\7dadf57123ac1e877b9417c93ac8739c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\b02f2eb21f562f2a8b7a6537abdc641d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\b02f2eb21f562f2a8b7a6537abdc641d\AndroidManifest.xml:20:5-44
+MERGED from [pub.devrel:easypermissions:1.0.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\9b05bc4f019d5a19b83d10cd1044f9d1\AndroidManifest.xml:7:5-9:41
+MERGED from [pub.devrel:easypermissions:1.0.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\9b05bc4f019d5a19b83d10cd1044f9d1\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:5:5-7:41
+MERGED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:5:5-7:41
+MERGED from [cn.bingoogolapple:bga-baseadapter:1.2.9] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-baseadapter-1.2.9.aar\bcd7be7e097b0d0107060d2ec883d507\AndroidManifest.xml:6:5-8:41
+MERGED from [cn.bingoogolapple:bga-baseadapter:1.2.9] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-baseadapter-1.2.9.aar\bcd7be7e097b0d0107060d2ec883d507\AndroidManifest.xml:6:5-8:41
+MERGED from [cn.bingoogolapple:bga-flowlayout:1.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-flowlayout-1.0.0.aar\941bbadb61b63f496855e897c2f13b1e\AndroidManifest.xml:6:5-8:41
+MERGED from [cn.bingoogolapple:bga-flowlayout:1.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-flowlayout-1.0.0.aar\941bbadb61b63f496855e897c2f13b1e\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\glide-4.7.1.aar\790213e41146f5de6b5c2dfd1f99713d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\glide-4.7.1.aar\790213e41146f5de6b5c2dfd1f99713d\AndroidManifest.xml:7:5-9:41
+MERGED from [:zbar] D:\androidstudio_real_workplace\WaterSampling\zbar\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-7:41
+MERGED from [:zbar] D:\androidstudio_real_workplace\WaterSampling\zbar\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\93c12c5d5f0dbd3b36e33418a71a070d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\93c12c5d5f0dbd3b36e33418a71a070d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\ae81f2b3fc6e57dd02d0641a7381fc62\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\ae81f2b3fc6e57dd02d0641a7381fc62\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\c15c3af224da97c9096b8e4d072a4072\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\c15c3af224da97c9096b8e4d072a4072\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\aa6c9014c38292b4cb7bd72d1304e4d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\aa6c9014c38292b4cb7bd72d1304e4d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\7ff712cc3d0a46dbe894d746be04f8b6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\7ff712cc3d0a46dbe894d746be04f8b6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\f0619deb869716152a2712de4e3adcdf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\f0619deb869716152a2712de4e3adcdf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\be4b40d6c944fd7db8bb25f21f1e31ef\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\be4b40d6c944fd7db8bb25f21f1e31ef\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\8a77d055af01dace7ea2f562b2d90673\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\8a77d055af01dace7ea2f562b2d90673\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\0982081defe6180e4f457b3ca8e72881\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\0982081defe6180e4f457b3ca8e72881\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\bd504ec9237029d97552affc0d911c5b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\bd504ec9237029d97552affc0d911c5b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\34b9b820bf05c163c41e1f9ac966c413\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\34b9b820bf05c163c41e1f9ac966c413\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\4aaa66435327a768b45adcc478b3f14e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\4aaa66435327a768b45adcc478b3f14e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\21c726f3c488ac020a4ccab41ba23792\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\21c726f3c488ac020a4ccab41ba23792\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\3b5b5f60aef1e57f7aa175794a67f37a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\3b5b5f60aef1e57f7aa175794a67f37a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\292651d53df3d25d8cb07b75c69ca814\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\292651d53df3d25d8cb07b75c69ca814\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f67c09014d8f39f687235d81bf843836\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f67c09014d8f39f687235d81bf843836\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\5b095c969e0f15cefe0da6817d5f8dad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\5b095c969e0f15cefe0da6817d5f8dad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\26387c0d26b657541e1569ecfe47c2fb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\26387c0d26b657541e1569ecfe47c2fb\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.7.1.aar\95cad924d7f4148a1e5728e88ec54bc8\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.7.1.aar\95cad924d7f4148a1e5728e88ec54bc8\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\468b8e594fd817aef0ea3581eacdbe57\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\468b8e594fd817aef0ea3581eacdbe57\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\f526ab5e83ffcd80a68661e41ab98878\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\f526ab5e83ffcd80a68661e41ab98878\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\338b2c443b5a12a1cc990c73ff059752\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\338b2c443b5a12a1cc990c73ff059752\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\fbab436b97a3cae56ea8f92ca75f68f7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\fbab436b97a3cae56ea8f92ca75f68f7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\c43884873a1efccdb780905568f1806f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\c43884873a1efccdb780905568f1806f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\01c0f8e1c12ddf8e47ca1a20d761f9a3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\01c0f8e1c12ddf8e47ca1a20d761f9a3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\6927ce2160285dfb17b8d6df184c6c4e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\6927ce2160285dfb17b8d6df184c6c4e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3987ebe497c7e9e25669ad6b8cd60fef\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3987ebe497c7e9e25669ad6b8cd60fef\AndroidManifest.xml:20:5-44
+MERGED from [:qrcodecore] D:\androidstudio_real_workplace\WaterSampling\qrcodecore\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-7:41
+MERGED from [:qrcodecore] D:\androidstudio_real_workplace\WaterSampling\qrcodecore\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-7:41
+INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+		INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+		ADDED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+		INJECTED from D:\androidstudio_real_workplace\WaterSampling\zbardemo\src\main\AndroidManifest.xml
+activity#pub.devrel.easypermissions.AppSettingsDialogHolderActivity
+ADDED from [pub.devrel:easypermissions:1.0.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\9b05bc4f019d5a19b83d10cd1044f9d1\AndroidManifest.xml:12:9-16:66
+	android:label
+		ADDED from [pub.devrel:easypermissions:1.0.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\9b05bc4f019d5a19b83d10cd1044f9d1\AndroidManifest.xml:15:13-29
+	android:exported
+		ADDED from [pub.devrel:easypermissions:1.0.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\9b05bc4f019d5a19b83d10cd1044f9d1\AndroidManifest.xml:14:13-37
+	android:theme
+		ADDED from [pub.devrel:easypermissions:1.0.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\9b05bc4f019d5a19b83d10cd1044f9d1\AndroidManifest.xml:16:13-63
+	android:name
+		ADDED from [pub.devrel:easypermissions:1.0.1] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\easypermissions-1.0.1.aar\9b05bc4f019d5a19b83d10cd1044f9d1\AndroidManifest.xml:13:13-86
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:10:22-78
+uses-permission#android.permission.CAMERA
+ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:11:5-65
+MERGED from [:qrcodecore] D:\androidstudio_real_workplace\WaterSampling\qrcodecore\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:9:5-65
+MERGED from [:qrcodecore] D:\androidstudio_real_workplace\WaterSampling\qrcodecore\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:9:5-65
+	android:name
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:11:22-62
+activity#cn.bingoogolapple.photopicker.activity.BGAPhotoPreviewActivity
+ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:16:9-21:63
+	android:screenOrientation
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:19:13-49
+	android:windowSoftInputMode
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:21:13-60
+	android:configChanges
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:18:13-74
+	android:theme
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:20:13-46
+	android:name
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:17:13-90
+activity#cn.bingoogolapple.photopicker.activity.BGAPhotoPickerActivity
+ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:24:9-29:63
+	android:screenOrientation
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:27:13-49
+	android:windowSoftInputMode
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:29:13-60
+	android:configChanges
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:26:13-74
+	android:theme
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:28:13-46
+	android:name
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:25:13-89
+activity#cn.bingoogolapple.photopicker.activity.BGAPhotoPickerPreviewActivity
+ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:32:9-37:63
+	android:screenOrientation
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:35:13-49
+	android:windowSoftInputMode
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:37:13-60
+	android:configChanges
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:34:13-74
+	android:theme
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:36:13-46
+	android:name
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:33:13-96
+provider#cn.bingoogolapple.photopicker.util.BGAPhotoFileProvider
+ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:39:9-47:20
+	android:grantUriPermissions
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:43:13-47
+	android:authorities
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:41:13-82
+	android:exported
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:42:13-37
+	android:name
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:40:13-83
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:44:13-46:71
+	android:resource
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:46:17-68
+	android:name
+		ADDED from [cn.bingoogolapple:bga-photopicker:1.2.8] C:\Users\acer\.gradle\caches\transforms-1\files-1.1\bga-photopicker-1.2.8.aar\3324f49887e78cd3edbeaf49a57c6b22\AndroidManifest.xml:45:17-67
+uses-permission#android.permission.FLASHLIGHT
+ADDED from [:qrcodecore] D:\androidstudio_real_workplace\WaterSampling\qrcodecore\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:10:5-69
+	android:name
+		ADDED from [:qrcodecore] D:\androidstudio_real_workplace\WaterSampling\qrcodecore\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:10:22-66
+uses-feature#android.hardware.camera.autofocus
+ADDED from [:qrcodecore] D:\androidstudio_real_workplace\WaterSampling\qrcodecore\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:12:5-14:36
+	android:required
+		ADDED from [:qrcodecore] D:\androidstudio_real_workplace\WaterSampling\qrcodecore\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:14:9-33
+	android:name
+		ADDED from [:qrcodecore] D:\androidstudio_real_workplace\WaterSampling\qrcodecore\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:9-57
+uses-feature#android.hardware.camera.flash
+ADDED from [:qrcodecore] D:\androidstudio_real_workplace\WaterSampling\qrcodecore\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:15:5-17:36
+	android:required
+		ADDED from [:qrcodecore] D:\androidstudio_real_workplace\WaterSampling\qrcodecore\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:17:9-33
+	android:name
+		ADDED from [:qrcodecore] D:\androidstudio_real_workplace\WaterSampling\qrcodecore\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:16:9-53
