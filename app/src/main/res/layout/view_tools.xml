@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/linearLayoutRoot"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/bottles_tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="瓶子总数："/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="每类瓶子个数如下："/>
+    <TextView
+        android:id="@+id/bottleTypeNum_textView_tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="所需试剂如下："/>
+    <TextView
+        android:id="@+id/reagent_textView_tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""/>
+</LinearLayout>
