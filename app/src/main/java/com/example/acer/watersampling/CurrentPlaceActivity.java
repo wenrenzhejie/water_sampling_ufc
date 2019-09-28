@@ -35,7 +35,7 @@ public class CurrentPlaceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_place);
         listView = findViewById(R.id.current_tasks_listView);
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         String userId = intent.getStringExtra("userId");
         double latitude = intent.getDoubleExtra("latitude",0);
         double longitude = intent.getDoubleExtra("longitude",0);
@@ -46,6 +46,7 @@ public class CurrentPlaceActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Map<String, String> map = mapList.get(position);
                 Intent intent1 = new Intent(CurrentPlaceActivity.this,TaskDetailActivity.class);
+                intent1.putExtra("id",map.get("id"));
                 intent1.putExtra("placeName",map.get("placeName"));
                 intent1.putExtra("bottleType",map.get("bottleType"));
                 intent1.putExtra("reagent",map.get("reagent"));

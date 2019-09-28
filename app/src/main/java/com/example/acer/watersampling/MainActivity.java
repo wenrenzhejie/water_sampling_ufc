@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         BGAQRCodeUtil.setDebug(true);
        et_login_username = findViewById(R.id.et_login_username);
        et_login_password = findViewById(R.id.et_login_password);
+//       自动登录
+        autoLogin();
     }
 
     private void positionPermission(){
@@ -110,14 +112,17 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
                     SharedPreferences sharedPreferences = getSharedPreferences("user_login", MODE_PRIVATE);
                     SharedPreferences.Editor edit = sharedPreferences.edit();
 //                    保存用户名和密码
-                    edit.putString(username,password);
+                    edit.putString("username",username);
+                    edit.putString("password",password);
 //                    保存userId和密码
                     edit.putString("userId",String.valueOf(user1.getUserId()));
                     edit.apply();
 //                    启动UserDetailActivity
                     Intent intent = new Intent(MainActivity.this, UserDetailActivity.class);
                     intent.putExtra("data",data);
+//                  登录成功结束登录界面
                     startActivity(intent);
+                    finish();
                 }else if (msg.getCode() == 500){
 //                 登录失败
                     runOnUiThread(new Runnable() {
@@ -137,12 +142,57 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         startActivity(new Intent(MainActivity.this,ScanQrCodeActivity.class));
     }
 
+//    自动登录
+    private void autoLogin(){
+        SharedPreferences sharedPreferences = getSharedPreferences("user_login",MODE_PRIVATE);
+        String username = sharedPreferences.getString("username", null);
+        String password = sharedPreferences.getString("password", null);
+        if (username != null && password != null){
+            FormBody formBody = new FormBody.Builder()
+                    .add("username", username)
+                    .add("password", password)
+                    .build();
+            Request request = new Request.Builder()
+                    .url("http://10.0.1.38:8080/water_sampling/user/loginByName")
+                    .post(formBody)
+                    .build();
+            Call call = okHttpClient.newCall(request);
+            call.enqueue(new Callback() {
+                @Override
+                public void onFailure(Call call, IOException e) {
+                    Log.i("tag","自动登录失败了");
+                }
+
+                @Override
+                public void onResponse(Call call, Response response) throws IOException {
+                    String data = response.body().string();
+//                得到msg对象
+                    Msg msg = new Gson().fromJson(data, Msg.class);
+                    Object user = msg.getData().get("user");
+                    String s = new Gson().toJson(user);
+                    User user1 = new Gson().fromJson(s, User.class);
+                    Log.i("tag",msg.toString());
+                    if (msg.getCode() == 200){
+
+//                    启动UserDetailActivity
+                        Intent intent = new Intent(MainActivity.this, UserDetailActivity.class);
+                        intent.putExtra("data",data);
+                        startActivity(intent);
+//                        登录成功结束登录界面
+                        finish();
+                    }
+                }
+            });
+        }
+    }
+
 
     @Override
     protected void onStart() {
         super.onStart();
 //        requestCodeQRCodePermissions();
         positionPermission();
+
     }
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {

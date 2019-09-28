@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.acer.watersampling.bean.Msg;
+import com.example.acer.watersampling.bean.User;
 import com.google.gson.Gson;
 
 import org.w3c.dom.Text;
@@ -76,7 +77,7 @@ public class ScanBottleActivity extends AppCompatActivity implements QRCodeView.
     }
 
     @Override
-    public void onScanQRCodeSuccess(String result) {
+    public void onScanQRCodeSuccess(final String result) {
         Log.i("tag", "result:" + result);
         setTitle("扫描结果为：" + result);
 //        振动
@@ -85,7 +86,7 @@ public class ScanBottleActivity extends AppCompatActivity implements QRCodeView.
         TextView bottleType_textView_view = view.findViewById(R.id.bottleType_textView_view);
         TextView reagent_textView_view = view.findViewById(R.id.reagent_textView_view);
         TextView placeName_textView_view = view.findViewById(R.id.placeName_textView_view);
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         bottleType_textView_view.setText(intent.getStringExtra("bottleType"));
         reagent_textView_view.setText(intent.getStringExtra("reagent"));
         placeName_textView_view.setText(intent.getStringExtra("placeName"));
@@ -101,6 +102,39 @@ public class ScanBottleActivity extends AppCompatActivity implements QRCodeView.
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+//                        将瓶子的二维码code和完成时间插入到数据库中
+                        FormBody formBody = new FormBody.Builder()
+                                .add("id",intent.getStringExtra("id"))
+                                .add("bottleId", result)
+                                .build();
+                        Request request = new Request.Builder()
+                                .url("http://10.0.1.38:8080/water_sampling/task/saveScanBottle")
+                                .post(formBody)
+                                .build();
+                        Call call = okHttpClient.newCall(request);
+                        call.enqueue(new Callback() {
+                            @Override
+                            public void onFailure(Call call, IOException e) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Toast.makeText(ScanBottleActivity.this,"网络不好，请重试",Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onResponse(Call call, Response response) throws IOException {
+//                                保存成功
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Toast.makeText(ScanBottleActivity.this,"请速速完成采样任务",Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                                finish();
+                            }
+                        });
                           finish();
                     }
                 })

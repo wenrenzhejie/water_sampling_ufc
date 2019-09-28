@@ -28,6 +28,7 @@ public class TaskDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(TaskDetailActivity.this, ScanBottleActivity.class);
+                intent1.putExtra("id",intent.getStringExtra("id"));
                 intent1.putExtra("placeName",intent.getStringExtra("placeName"));
                 intent1.putExtra("bottleType",intent.getStringExtra("bottleType"));
                 intent1.putExtra("reagent",intent.getStringExtra("reagent"));

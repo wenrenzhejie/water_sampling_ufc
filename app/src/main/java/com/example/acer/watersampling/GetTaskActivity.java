@@ -1,6 +1,7 @@
 package com.example.acer.watersampling;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,6 +18,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 
 import java.io.IOException;
@@ -36,6 +38,7 @@ public class GetTaskActivity extends AppCompatActivity {
     private ListView listView;
     private Button select_task_button;
     private OkHttpClient okHttpClient;
+    private List<Integer> taskIdList = new ArrayList<>();
     private List<String> taskNameList = new ArrayList<>();
     private List<String> taskBottleTypeList = new ArrayList<>();
     private List<String> taskReagentList = new ArrayList<>();
@@ -54,7 +57,7 @@ public class GetTaskActivity extends AppCompatActivity {
         select_task_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<String> checkBoxList = taskSelectAdapter.getCheckBoxList();
+                final List<String> checkBoxList = taskSelectAdapter.getCheckBoxList();
                 View view = View.inflate(GetTaskActivity.this, R.layout.view_taskname_showselected, null);
                 LinearLayout linearLayout = view.findViewById(R.id.showSelected_linearLayout);
                 for (String str:checkBoxList){
@@ -76,8 +79,20 @@ public class GetTaskActivity extends AppCompatActivity {
 //                                保存到数据库
                                 SharedPreferences sharedPreferences = getSharedPreferences("user_login", MODE_PRIVATE);
                                 String userId = sharedPreferences.getString("userId", "NotFond");
+                                List<Integer> selectedTaskIdList = new ArrayList<>();
+                                for (int i = 0; i <checkBoxList.size();i++){
+                                    for (int j = 0;j < taskNameList.size();j++){
+                                        if (taskNameList.get(j).equals(checkBoxList.get(i))){
+                                            selectedTaskIdList.add(taskIdList.get(j));
+                                            break;
+                                        }
+                                    }
+                                }
                                 FormBody.Builder builder = new FormBody.Builder();
+                                String ids = JSON.toJSONString(selectedTaskIdList);
                                 builder.add("userId",userId);
+                                builder.add("ids",ids);
+                                Log.i("ids",ids);
                                 RequestBody requestBody = builder.build();
                                 Request request = new Request.Builder()
                                         .url("http://10.0.1.38:8080/water_sampling/task/saveSelectedTasks")
@@ -86,12 +101,12 @@ public class GetTaskActivity extends AppCompatActivity {
                                 okHttpClient.newCall(request).enqueue(new Callback() {
                                     @Override
                                     public void onFailure(Call call, IOException e) {
-                                        Toast.makeText(GetTaskActivity.this,"网络连接错误，请稍等",Toast.LENGTH_SHORT).show();
+                                        Log.i("msg","失败");
                                     }
 
                                     @Override
                                     public void onResponse(Call call, Response response) throws IOException {
-                                        Toast.makeText(GetTaskActivity.this,"选择成功",Toast.LENGTH_SHORT).show();
+                                        Log.i("msg","成功");
                                     }
                                 });
                             }
@@ -150,9 +165,10 @@ public class GetTaskActivity extends AppCompatActivity {
                         mapList = JSONArray.parseObject(allTasks,List.class);
 
                         for (Map<String,String> map:mapList){
-                            taskNameList.add(map.get("placeName"));
-                            taskBottleTypeList.add(map.get("bottleType"));
-                            taskReagentList.add(map.get("reagent"));
+                                taskIdList.add(Integer.parseInt(map.get("id")));
+                                taskNameList.add(map.get("placeName"));
+                                taskBottleTypeList.add(map.get("bottleType"));
+                                taskReagentList.add(map.get("reagent"));
                         }
                         Log.i("taskName",taskNameList.toString()+"ssssssssssssss");
                         handler.sendEmptyMessage(0x001);
