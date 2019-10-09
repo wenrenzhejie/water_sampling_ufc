@@ -1,8 +1,8 @@
 package com.example.acer.watersampling;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -36,7 +36,13 @@ public class TaskDetailActivity extends AppCompatActivity {
             }
         });
 
-//        监听查找RFIC
+//        监听查找RFIC,使用超高频
+        searchRFIC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
     }
 }
