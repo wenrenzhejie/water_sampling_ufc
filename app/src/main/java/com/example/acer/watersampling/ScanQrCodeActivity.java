@@ -14,8 +14,11 @@ import com.example.acer.watersampling.bean.Msg;
 import com.google.gson.Gson;
 
 import java.io.IOException;
+import java.net.ConnectException;
+import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import cn.bingoogolapple.photopicker.activity.BGAPhotoPickerActivity;
 import cn.bingoogolapple.qrcode.core.BarcodeType;
@@ -32,8 +35,17 @@ import okhttp3.Response;
 public class ScanQrCodeActivity extends AppCompatActivity implements QRCodeView.Delegate{
     private static final String TAG = ScanQrCodeActivity.class.getSimpleName();
     private static final int REQUEST_CODE_CHOOSE_QRCODE_FROM_GALLERY = 666;
-    private OkHttpClient okHttpClient = new OkHttpClient();
+    private OkHttpClient okHttpClient = new OkHttpClient.Builder()
+            .connectTimeout(20, TimeUnit.SECONDS)
+            .readTimeout(20,TimeUnit.SECONDS)
+            .build();
     private ZBarView mZBarView;
+    //        设置最大重连接次数
+    private int maxConnectTimes = 3;
+    //    设置当前连接次数
+    private int currentConnextTimes = 0;
+
+    private Intent  intent = new Intent();;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +92,7 @@ public class ScanQrCodeActivity extends AppCompatActivity implements QRCodeView.
         FormBody formBody = new FormBody.Builder()
                 .add("userId", result)
                 .build();
-        Request request = new Request.Builder()
+        final Request request = new Request.Builder()
                 .url("http://10.0.1.38:8080/water_sampling/user/loginByQrcode")
                 .post(formBody)
                 .build();
@@ -88,27 +100,43 @@ public class ScanQrCodeActivity extends AppCompatActivity implements QRCodeView.
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                Log.i("tag","失败了");
+                if ((e instanceof SocketTimeoutException || e instanceof ConnectException) && currentConnextTimes < maxConnectTimes){
+                    currentConnextTimes++;
+                    okHttpClient.newCall(request).enqueue(this);
+                    Log.i("currentConnextTimes","currentConnextTimes:"+currentConnextTimes);
+                    if (currentConnextTimes == maxConnectTimes){
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(ScanQrCodeActivity.this,"网络质量不好，请检查您的网络",Toast.LENGTH_SHORT).show();
+                              finish();
+                            }
+                        });
+                    }
+                }
             }
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String data = response.body().string();
+                Log.i("tag",data+"aaaaaaaaaaaaaaaaa");
 //                得到msg对象
                 Msg msg = new Gson().fromJson(data, Msg.class);
                 Log.i("tag",msg.toString());
                 if (msg.getCode() == 200){
 //                登录成功
-                    Intent intent = new Intent(ScanQrCodeActivity.this, UserDetailActivity.class);
+//                    Intent intent = new Intent(ScanQrCodeActivity.this, UserDetailActivity.class);
+
                     intent.putExtra("data",data);
-                    startActivity(intent);
+                    setResult(0x100,intent);
                 }else if (msg.getCode() == 500){
 //                 登录失败
-                    runOnUiThread(new Runnable() {
+                    setResult(0x101,intent);
+                   /* runOnUiThread(new Runnable() {
                         @Override
-                        public void run() {
+                            public void run() {
                             Toast.makeText(ScanQrCodeActivity.this,"您暂未得到授权",Toast.LENGTH_SHORT).show();
                         }
-                    });
+                    });*/
 
                 }
                 finish();

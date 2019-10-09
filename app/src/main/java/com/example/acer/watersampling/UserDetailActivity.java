@@ -83,8 +83,8 @@ public class UserDetailActivity extends AppCompatActivity implements View.OnClic
     }
     private void initLocation(){
         LocationClientOption option = new LocationClientOption();
-        option.setScanSpan(5000);
-        option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);
+        option.setScanSpan(5000);  //三秒扫描一次
+        option.setLocationMode(LocationClientOption.LocationMode.Device_Sensors);
         option.setIsNeedAddress(true);
         locationClient.setLocOption(option);
     }
@@ -112,7 +112,6 @@ public class UserDetailActivity extends AppCompatActivity implements View.OnClic
                 break;
 //                领取任务
             case R.id.getTask_button:
-                Log.i("tag","aaaaaaaaaaaa");
                 startActivity(new Intent(UserDetailActivity.this,GetTaskActivity.class));
                 break;
 
@@ -187,7 +186,7 @@ public class UserDetailActivity extends AppCompatActivity implements View.OnClic
                     StringBuilder currentPosition = new StringBuilder();
                     latitude = location.getLatitude();
                     longitude = location.getLongitude();
-                    currentPosition.append("纬度：").append(location.getLatitude()).
+                   /* currentPosition.append("纬度：").append(location.getLatitude()).
                             append("\n");
                     currentPosition.append("经线：").append(location.getLongitude()).
                             append("\n");
@@ -196,8 +195,8 @@ public class UserDetailActivity extends AppCompatActivity implements View.OnClic
                     currentPosition.append("区：").append(location.getDistrict()).
                             append("\n");
                     currentPosition.append("街道：").append(location.getStreet()).
-                            append("\n");
-                    currentPosition.append("详细地址：").append(location.getAddrStr()).
+                            append("\n");*/
+                    currentPosition.append("当前位置：").append(location.getAddrStr()).
                             append("\n");
                     currentPosition.append("定位方式：");
                     if (location.getLocType() == BDLocation.TypeGpsLocation) {

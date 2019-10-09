@@ -9,10 +9,12 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app_machine" />
             <option value="$PROJECT_DIR$/baidu_map" />
             <option value="$PROJECT_DIR$/dialog_map" />
             <option value="$PROJECT_DIR$/location" />
             <option value="$PROJECT_DIR$/qrcodecore" />
+            <option value="$PROJECT_DIR$/rfic" />
             <option value="$PROJECT_DIR$/user_ewm_login" />
             <option value="$PROJECT_DIR$/zbar" />
             <option value="$PROJECT_DIR$/zbardemo" />

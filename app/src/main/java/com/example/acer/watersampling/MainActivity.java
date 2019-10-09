@@ -4,15 +4,15 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.view.textclassifier.TextLinks;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,8 +21,11 @@ import com.example.acer.watersampling.bean.User;
 import com.google.gson.Gson;
 
 import java.io.IOException;
+import java.net.ConnectException;
+import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import cn.bingoogolapple.qrcode.core.BGAQRCodeUtil;
 import okhttp3.Call;
@@ -30,15 +33,21 @@ import okhttp3.Callback;
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.RequestBody;
 import okhttp3.Response;
-import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
 public class MainActivity extends AppCompatActivity implements EasyPermissions.PermissionCallbacks{
     private static final int REQUEST_CODE_QRCODE_PERMISSIONS = 1;
     private EditText et_login_username,et_login_password;
-    private OkHttpClient okHttpClient = new OkHttpClient();
+    private Button bt_username_login,bt_qrcode_login;
+    //        设置最大重连接次数
+    private int maxConnectTimes = 3;
+//    设置当前连接次数
+    private int currentConnextTimes = 0;
+    private OkHttpClient okHttpClient = new OkHttpClient.Builder()
+            .connectTimeout(20, TimeUnit.SECONDS)
+            .readTimeout(20,TimeUnit.SECONDS)
+            .build();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,10 +55,12 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
         BGAQRCodeUtil.setDebug(true);
+        bt_username_login = findViewById(R.id.bt_username_login);
+        bt_qrcode_login = findViewById(R.id.bt_qrcode_login);
        et_login_username = findViewById(R.id.et_login_username);
        et_login_password = findViewById(R.id.et_login_password);
 //       自动登录
-        autoLogin();
+//        autoLogin();
     }
 
     private void positionPermission(){
@@ -79,6 +90,9 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
     }
     //    用户名登录
     public void loginByName(View view){
+//        在重连之前禁用按钮
+        bt_username_login.setEnabled(false);
+
         final String username = et_login_username.getText().toString();
         final String password = et_login_password.getText().toString();
         Log.i("tag",username+":"+password);
@@ -86,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
                 .add("username", username)
                 .add("password", password)
                 .build();
-        Request request = new Request.Builder()
+        final Request request = new Request.Builder()
                 .url("http://10.0.1.38:8080/water_sampling/user/loginByName")
                 .post(formBody)
                 .build();
@@ -95,6 +109,23 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
             @Override
             public void onFailure(Call call, IOException e) {
                 Log.i("tag","失败了");
+                Log.i("tag",e.getClass().getName());
+                if ((e instanceof SocketTimeoutException || e instanceof ConnectException) && currentConnextTimes < maxConnectTimes){
+                    currentConnextTimes++;
+                    okHttpClient.newCall(request).enqueue(this);
+                    Log.i("currentConnextTimes","currentConnextTimes:"+currentConnextTimes);
+                    if (currentConnextTimes == maxConnectTimes){
+                      runOnUiThread(new Runnable() {
+                          @Override
+                          public void run() {
+                              Toast.makeText(MainActivity.this,"网络质量不好，请检查您的网络",Toast.LENGTH_SHORT).show();
+//                              finish();
+                              bt_username_login.setEnabled(true);
+                              currentConnextTimes = 0;
+                          }
+                      });
+                    }
+                }
             }
 
             @Override
@@ -139,10 +170,30 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
     }
 //    扫码登录
     public void loginByQrcode(View view){
-        startActivity(new Intent(MainActivity.this,ScanQrCodeActivity.class));
+        bt_qrcode_login.setEnabled(false);
+        Intent intent = new Intent(MainActivity.this, ScanQrCodeActivity.class);
+        startActivityForResult(intent,0x100);
     }
 
-//    自动登录
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 0x100 && resultCode == 0x100){
+//        登录成功
+            Intent intent = new Intent(MainActivity.this, UserDetailActivity.class);
+            intent.putExtra("data",data.getStringExtra("data"));
+            //登录成功结束本界面
+            startActivity(intent);
+//            finish();
+        }else if (requestCode == 0x100 && resultCode == 0x101){
+//            登录失败
+            Log.i("tag","进到这里来了");
+            bt_qrcode_login.setEnabled(true);
+            Toast.makeText(MainActivity.this,"您暂未得到授权,无法登陆系统",Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    //    自动登录
     private void autoLogin(){
         SharedPreferences sharedPreferences = getSharedPreferences("user_login",MODE_PRIVATE);
         String username = sharedPreferences.getString("username", null);
@@ -152,7 +203,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
                     .add("username", username)
                     .add("password", password)
                     .build();
-            Request request = new Request.Builder()
+            final Request request = new Request.Builder()
                     .url("http://10.0.1.38:8080/water_sampling/user/loginByName")
                     .post(formBody)
                     .build();
@@ -160,7 +211,21 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
             call.enqueue(new Callback() {
                 @Override
                 public void onFailure(Call call, IOException e) {
-                    Log.i("tag","自动登录失败了");
+                    if ((e instanceof SocketTimeoutException || e instanceof ConnectException) && currentConnextTimes < maxConnectTimes){
+                        currentConnextTimes++;
+                        okHttpClient.newCall(request).enqueue(this);
+                        if (currentConnextTimes == maxConnectTimes){
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(MainActivity.this,"网络质量不好，请检查您的网络",Toast.LENGTH_SHORT).show();
+//                              finish();
+                                    bt_username_login.setEnabled(true);
+                                    currentConnextTimes = 0;
+                                }
+                            });
+                        }
+                    }
                 }
 
                 @Override
