@@ -67,7 +67,7 @@ public class CurrentPlaceActivity extends AppCompatActivity {
 
         okHttpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url("http://10.0.1.38:8080/water_sampling/task/getCurrentTasksByUserIdAndLocation?userId="+userId+"&longitude="+latitude+"&latitude="+longitude)
+                .url("http://192.168.123.4:8080/water_sampling/task/getCurrentTasksByUserIdAndLocation?userId="+userId+"&longitude="+latitude+"&latitude="+longitude)
                 .get()
                 .build();
         new Thread(new Runnable() {

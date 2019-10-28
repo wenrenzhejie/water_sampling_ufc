@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
        et_login_username = findViewById(R.id.et_login_username);
        et_login_password = findViewById(R.id.et_login_password);
 //       自动登录
-//        autoLogin();
+        autoLogin();
     }
 
     private void positionPermission(){
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
                 .add("password", password)
                 .build();
         final Request request = new Request.Builder()
-                .url("http://10.0.1.38:8080/water_sampling/user/loginByName")
+                .url("http://192.168.123.4:8080/water_sampling/user/loginByName")
                 .post(formBody)
                 .build();
         Call call = okHttpClient.newCall(request);
@@ -159,6 +159,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
+                            bt_username_login.setEnabled(true);
                             Toast.makeText(MainActivity.this,"用户名或密码错误",Toast.LENGTH_SHORT).show();
                         }
                     });
@@ -204,7 +205,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
                     .add("password", password)
                     .build();
             final Request request = new Request.Builder()
-                    .url("http://10.0.1.38:8080/water_sampling/user/loginByName")
+                    .url("http://192.168.123.4:8080/water_sampling/user/loginByName")
                     .post(formBody)
                     .build();
             Call call = okHttpClient.newCall(request);

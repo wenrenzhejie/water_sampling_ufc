@@ -93,7 +93,7 @@ public class ScanQrCodeActivity extends AppCompatActivity implements QRCodeView.
                 .add("userId", result)
                 .build();
         final Request request = new Request.Builder()
-                .url("http://10.0.1.38:8080/water_sampling/user/loginByQrcode")
+                .url("http://192.168.123.4:8080/water_sampling/user/loginByQrcode")
                 .post(formBody)
                 .build();
         Call call = okHttpClient.newCall(request);

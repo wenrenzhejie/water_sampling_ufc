@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllTasksActivity">
+    tools:context=".AllTasksActivity"
+    android:orientation="vertical">
 
     <ListView
         android:id="@+id/tasks_listView"
@@ -12,4 +13,10 @@
         android:layout_height="match_parent">
 
     </ListView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ddd"
+        android:textColor="#111111"/>
 </LinearLayout>

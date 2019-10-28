@@ -121,7 +121,7 @@ public class UserDetailActivity extends AppCompatActivity implements View.OnClic
     private void showAllTools(){
         OkHttpClient okHttpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url("http://10.0.1.38:8080/water_sampling/task/getAllTools?userId=" + userId)
+                .url("http://192.168.123.4:8080/water_sampling/task/getAllTools?userId=" + userId)
                 .get()
                 .build();
         okHttpClient.newCall(request).enqueue(new Callback() {
@@ -196,15 +196,15 @@ public class UserDetailActivity extends AppCompatActivity implements View.OnClic
                             append("\n");
                     currentPosition.append("街道：").append(location.getStreet()).
                             append("\n");*/
-                    currentPosition.append("当前位置：").append(location.getAddrStr()).
+                    currentPosition.append("位置：").append(location.getAddrStr()).
                             append("\n");
-                    currentPosition.append("定位方式：");
+                   /* currentPosition.append("定位方式：");
                     if (location.getLocType() == BDLocation.TypeGpsLocation) {
                         currentPosition.append("GPS");
                     } else if (location.getLocType() ==
                             BDLocation.TypeNetWorkLocation) {
                         currentPosition.append("网络");
-                    }
+                    }*/
                     currentPositionText.setText(currentPosition);
                 }
             });

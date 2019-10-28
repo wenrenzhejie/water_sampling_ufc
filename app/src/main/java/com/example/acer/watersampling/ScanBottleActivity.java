@@ -108,7 +108,7 @@ public class ScanBottleActivity extends AppCompatActivity implements QRCodeView.
                                 .add("bottleId", result)
                                 .build();
                         Request request = new Request.Builder()
-                                .url("http://10.0.1.38:8080/water_sampling/task/saveScanBottle")
+                                .url("http://192.168.123.4:8080/water_sampling/task/saveScanBottle")
                                 .post(formBody)
                                 .build();
                         Call call = okHttpClient.newCall(request);

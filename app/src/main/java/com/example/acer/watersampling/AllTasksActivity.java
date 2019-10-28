@@ -1,7 +1,9 @@
 package com.example.acer.watersampling;
 
+import android.content.DialogInterface;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,13 +35,13 @@ public class AllTasksActivity extends AppCompatActivity {
         setContentView(R.layout.activity_all_task);
         listView = findViewById(R.id.tasks_listView);
         getAllTasks(getIntent().getStringExtra("userId"));
-
     }
 
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
             listView.setAdapter(new TaskAdapter(AllTasksActivity.this,taskNameList));
+
         }
     };
 
@@ -47,7 +49,7 @@ public class AllTasksActivity extends AppCompatActivity {
         okHttpClient = new OkHttpClient();
 
         final Request request = new Request.Builder()
-                .url("http://10.0.1.38:8080/water_sampling/task/getAllTasksByUserId?userId=" + userId)
+                .url("http://192.168.123.4:8080/water_sampling/task/getAllTasksByUserId?userId=" + userId)
                 .get()
                 .build();
         new Thread(new Runnable() {
@@ -57,7 +59,7 @@ public class AllTasksActivity extends AppCompatActivity {
                     Response response = okHttpClient.newCall(request).execute();
                     if (response.code() == 200){
                         String allTasks = response.body().string();
-                        Log.i("taskName",allTasks);
+                        Log.i("taskName",allTasks+"mmmmmmmmmmmmmm");
                         JsonArray jsonElements = new Gson().fromJson(allTasks, JsonArray.class);
                         for (int i=0;i<jsonElements.size();i++){
                             taskNameList.add(new Gson().fromJson(jsonElements.get(i),String.class));

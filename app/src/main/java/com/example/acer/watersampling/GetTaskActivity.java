@@ -95,7 +95,7 @@ public class GetTaskActivity extends AppCompatActivity {
                                 Log.i("ids",ids);
                                 RequestBody requestBody = builder.build();
                                 Request request = new Request.Builder()
-                                        .url("http://10.0.1.38:8080/water_sampling/task/saveSelectedTasks")
+                                        .url("http://192.168.123.4:8080/water_sampling/task/saveSelectedTasks")
                                         .post(requestBody)
                                         .build();
                                 okHttpClient.newCall(request).enqueue(new Callback() {
@@ -142,8 +142,29 @@ public class GetTaskActivity extends AppCompatActivity {
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
-            taskSelectAdapter.setTaskList(taskNameList);
-            listView.setAdapter(taskSelectAdapter);
+            if (taskNameList.size() == 0){
+                new AlertDialog.Builder(GetTaskActivity.this)
+                        .setTitle("暂无可选择的采样任务")
+                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        finish();
+                                    }
+                                });
+
+                            }
+                        })
+                        .show();
+
+
+            }else {
+                taskSelectAdapter.setTaskList(taskNameList);
+                listView.setAdapter(taskSelectAdapter);
+            }
+
         }
     };
 
@@ -151,7 +172,7 @@ public class GetTaskActivity extends AppCompatActivity {
         okHttpClient = new OkHttpClient();
 
         final Request request = new Request.Builder()
-                .url("http://10.0.1.38:8080/water_sampling/task/getAllUnSelectedTasks")
+                .url("http://192.168.123.4:8080/water_sampling/task/getAllUnSelectedTasks")
                 .get()
                 .build();
         new Thread(new Runnable() {
